@@ -1,0 +1,171 @@
+html, body {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 10px;
+ background-color: grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+.pink {
+  color: #EBBFB1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.newspaper {
+  width: 100%;
+  background-color: white;
+  padding: 3rem 3rem 1rem;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: row;
+  & .title {
+    width: 100%;
+    border-right: 0.2rem solid #EBBFB1;
+  }
+  & .subtitle {
+    color: #756F6E;
+    width: 100%;
+    padding: 0 0 0 0.5rem;
+    font-weight: 500;
+    & .subsection {
+      padding: 0.6rem 0;
+    }
+  }
+}
+
+.details-section {
+  width: calc(100% - 1rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  & .details-number {
+    font-style: italic;
+  }
+}
+
+.photo-section {
+  position: relative;
+  display: flex;
+  background-image: url("photo.png"); 
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+  & .side-info {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: -1.5rem;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+  & .top-content {
+    color: #756F6E;
+    width: 33%;
+    padding: 4rem;
+    justify-content: flex-start;
+    & .title {
+      padding-bottom: 1rem;
+    }
+  }
+  & .down-content {
+    display: flex;
+    flex-direction: row;
+    height: 18rem;
+  }
+}
+
+.left-side {
+  color: white;
+  padding: 0 0 4rem 4rem;
+  width: 66%;
+  & .title {
+    & h2 {
+      letter-spacing: 0.1rem;
+    }
+  }
+  & .note {
+    font-style: italic;
+    margin: 0;
+    padding-top: 1rem;
+  }
+}
+
+.right-side {
+  width: 33%;
+  height: 16.5rem;
+  color: #756F6E;
+  background-color: white;
+  & .title {
+    margin: 0;
+    padding: 1rem 1rem 0 1rem;
+  }
+  & .content {
+    padding: 0 1rem;
+    font-style: italic;
+  }
+  &>.signature {
+    font-style: italic;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+}
