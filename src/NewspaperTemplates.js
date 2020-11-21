@@ -1,6 +1,6 @@
 import React from 'react';
 import './NewspaperTemplates.scss';
-import qr from './qr.png';
+import qr from './assets/qr.png';
 
 const NewspaperTemplates = () => {
 
