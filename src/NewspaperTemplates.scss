@@ -22,8 +22,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.6rem;
-  line-height: 3rem;
+  font-size: 3rem;
+  line-height: 3.3rem;
   font-weight: 600;
 }
 
@@ -72,16 +72,16 @@ h6 {
 .header-section {
   display: flex;
   flex-direction: row;
-  & .title {
+  &>.title {
     width: 100%;
     border-right: 0.2rem solid #EBBFB1;
   }
-  & .subtitle {
+  &>.subtitle {
     color: #756F6E;
     width: 100%;
     padding: 0 0 0 0.5rem;
     font-weight: 500;
-    & .subsection {
+    &>.subsection {
       padding: 0.6rem 0;
     }
   }
@@ -93,7 +93,7 @@ h6 {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem;
-  & .details-number {
+  &>.details-number {
     font-style: italic;
   }
 }
@@ -107,7 +107,7 @@ h6 {
   background-size: cover;
   flex-direction: column;
   justify-content: space-between;
-  & .side-info {
+  &>.side-info {
     position: absolute;
     height: 100%;
     top: 0;
@@ -117,55 +117,81 @@ h6 {
     transform: rotate(180deg);
     text-align: center;
   }
-  & .top-content {
+  &>.top-content {
     color: #756F6E;
     width: 33%;
     padding: 4rem;
     justify-content: flex-start;
-    & .title {
+    &>.title {
       padding-bottom: 1rem;
     }
   }
-  & .down-content {
+  &>.down-content {
     display: flex;
     flex-direction: row;
     height: 18rem;
-  }
-}
-
-.left-side {
-  color: white;
-  padding: 0 0 4rem 4rem;
-  width: 66%;
-  & .title {
-    & h2 {
-      letter-spacing: 0.1rem;
+     &>.left-side {
+      color: white;
+      padding: 0 0 4rem 4rem;
+      width: 66%;
+      &>.title {
+        &>h2 {
+          letter-spacing: 0.2rem;
+        }
+      }
+      &>.note {
+        font-style: italic;
+        margin: 0;
+        padding-top: 1rem;
+      }
+    }
+    &>.right-side {
+      width: 33%;
+      height: 16.5rem;
+      color: #756F6E;
+      background-color: white;
+      &>.title {
+        margin: 0;
+        padding: 1rem 1rem 0 1rem;
+      }
+      &>.content {
+        padding: 0 1rem;
+        font-style: italic;
+      }
+      &>.signature {
+        font-style: italic;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        text-align: right;
+      }
     }
   }
-  & .note {
-    font-style: italic;
-    margin: 0;
-    padding-top: 1rem;
-  }
 }
 
-.right-side {
-  width: 33%;
-  height: 16.5rem;
+.footer-section {
+  padding: 0.3rem 0;
+  display: flex;
+  flex-direction: row;
   color: #756F6E;
-  background-color: white;
-  & .title {
-    margin: 0;
-    padding: 1rem 1rem 0 1rem;
+  &>img {
+    height: 5.5rem;
+    width: 5.5rem;
   }
-  & .content {
-    padding: 0 1rem;
-    font-style: italic;
-  }
-  &>.signature {
-    font-style: italic;
-    padding: 0.8rem;
-    font-size: 0.8rem;
-    text-align: right;
+  &>.right-side {
+    width: 100%;
+    padding-left: 1.5rem;
+
+    &>.content {
+      display: flex;
+      font-size: 1.3rem;
+      padding: 0.3rem 0 0.5rem;
+      justify-content: center;
+    }
+    &>p {
+      word-break: break-all;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      font-style: italic;
+    }
   }
 }
